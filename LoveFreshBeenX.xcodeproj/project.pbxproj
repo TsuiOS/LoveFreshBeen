@@ -13,9 +13,12 @@
 		796A910F1D09480600FA96C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796A910D1D09480600FA96C6 /* Main.storyboard */; };
 		796A91111D09480600FA96C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796A91101D09480600FA96C6 /* Assets.xcassets */; };
 		796A91141D09480600FA96C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796A91121D09480600FA96C6 /* LaunchScreen.storyboard */; };
+		AEE54DE0F80F13B486C674F0 /* Pods_LoveFreshBeenX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD676BEE8F2ECEAC13AD6B4 /* Pods_LoveFreshBeenX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		033DC6914B92F6253A1FB8A5 /* Pods-LoveFreshBeenX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveFreshBeenX.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveFreshBeenX/Pods-LoveFreshBeenX.release.xcconfig"; sourceTree = "<group>"; };
+		3EEE3AC178BCDB956D086FFF /* Pods-LoveFreshBeenX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveFreshBeenX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveFreshBeenX/Pods-LoveFreshBeenX.debug.xcconfig"; sourceTree = "<group>"; };
 		796A91041D09480600FA96C6 /* LoveFreshBeenX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveFreshBeenX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		796A91071D09480600FA96C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		796A91091D09480600FA96C6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		796A91101D09480600FA96C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		796A91131D09480600FA96C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		796A91151D09480600FA96C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD676BEE8F2ECEAC13AD6B4 /* Pods_LoveFreshBeenX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveFreshBeenX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE54DE0F80F13B486C674F0 /* Pods_LoveFreshBeenX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E422B64813339C6F94C0634 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3EEE3AC178BCDB956D086FFF /* Pods-LoveFreshBeenX.debug.xcconfig */,
+				033DC6914B92F6253A1FB8A5 /* Pods-LoveFreshBeenX.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		796A90FB1D09480600FA96C6 = {
 			isa = PBXGroup;
 			children = (
 				796A91061D09480600FA96C6 /* LoveFreshBeenX */,
 				796A91051D09480600FA96C6 /* Products */,
+				5E422B64813339C6F94C0634 /* Pods */,
+				A8DA01AFEC2B11A821AA7CAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,14 @@
 			path = LoveFreshBeenX;
 			sourceTree = "<group>";
 		};
+		A8DA01AFEC2B11A821AA7CAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFD676BEE8F2ECEAC13AD6B4 /* Pods_LoveFreshBeenX.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 796A91181D09480600FA96C6 /* Build configuration list for PBXNativeTarget "LoveFreshBeenX" */;
 			buildPhases = (
+				9FB9F1967D7B54829674C615 /* 📦 Check Pods Manifest.lock */,
 				796A91001D09480600FA96C6 /* Sources */,
 				796A91011D09480600FA96C6 /* Frameworks */,
 				796A91021D09480600FA96C6 /* Resources */,
+				34D10C415612AAC79C8368B2 /* 📦 Embed Pods Frameworks */,
+				91F3435655D59565AD1A6942 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34D10C415612AAC79C8368B2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoveFreshBeenX/Pods-LoveFreshBeenX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91F3435655D59565AD1A6942 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoveFreshBeenX/Pods-LoveFreshBeenX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FB9F1967D7B54829674C615 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		796A91001D09480600FA96C6 /* Sources */ = {
@@ -251,6 +326,7 @@
 		};
 		796A91191D09480600FA96C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EEE3AC178BCDB956D086FFF /* Pods-LoveFreshBeenX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LoveFreshBeenX/Info.plist;
@@ -262,6 +338,7 @@
 		};
 		796A911A1D09480600FA96C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 033DC6914B92F6253A1FB8A5 /* Pods-LoveFreshBeenX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LoveFreshBeenX/Info.plist;
@@ -290,6 +367,7 @@
 				796A911A1D09480600FA96C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
