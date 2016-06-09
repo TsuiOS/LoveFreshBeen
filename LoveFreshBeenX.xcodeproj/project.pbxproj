@@ -8,11 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		796A91081D09480600FA96C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91071D09480600FA96C6 /* AppDelegate.swift */; };
-		796A910A1D09480600FA96C6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91091D09480600FA96C6 /* MasterViewController.swift */; };
-		796A910C1D09480600FA96C6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A910B1D09480600FA96C6 /* DetailViewController.swift */; };
-		796A910F1D09480600FA96C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796A910D1D09480600FA96C6 /* Main.storyboard */; };
 		796A91111D09480600FA96C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796A91101D09480600FA96C6 /* Assets.xcassets */; };
-		796A91141D09480600FA96C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796A91121D09480600FA96C6 /* LaunchScreen.storyboard */; };
+		796A91601D094CCB00FA96C6 /* AD in Resources */ = {isa = PBXBuildFile; fileRef = 796A913E1D094CCB00FA96C6 /* AD */; };
+		796A91611D094CCB00FA96C6 /* FocusURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 796A913F1D094CCB00FA96C6 /* FocusURL.plist */; };
+		796A91621D094CCB00FA96C6 /* HelpPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 796A91401D094CCB00FA96C6 /* HelpPlist.plist */; };
+		796A91631D094CCB00FA96C6 /* Mine in Resources */ = {isa = PBXBuildFile; fileRef = 796A91411D094CCB00FA96C6 /* Mine */; };
+		796A91641D094CCB00FA96C6 /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 796A91421D094CCB00FA96C6 /* MinePlist.plist */; };
+		796A91651D094CCB00FA96C6 /* MyAdress in Resources */ = {isa = PBXBuildFile; fileRef = 796A91431D094CCB00FA96C6 /* MyAdress */; };
+		796A91661D094CCB00FA96C6 /* MyCoupon in Resources */ = {isa = PBXBuildFile; fileRef = 796A91441D094CCB00FA96C6 /* MyCoupon */; };
+		796A91671D094CCB00FA96C6 /* MyOrders in Resources */ = {isa = PBXBuildFile; fileRef = 796A91451D094CCB00FA96C6 /* MyOrders */; };
+		796A91681D094CCB00FA96C6 /* Search in Resources */ = {isa = PBXBuildFile; fileRef = 796A91461D094CCB00FA96C6 /* Search */; };
+		796A91691D094CCB00FA96C6 /* SearchProduct in Resources */ = {isa = PBXBuildFile; fileRef = 796A91471D094CCB00FA96C6 /* SearchProduct */; };
+		796A916A1D094CCB00FA96C6 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = 796A91481D094CCB00FA96C6 /* supermarket */; };
+		796A916B1D094CCB00FA96C6 /* SystemMessage in Resources */ = {isa = PBXBuildFile; fileRef = 796A91491D094CCB00FA96C6 /* SystemMessage */; };
+		796A916C1D094CCB00FA96C6 /* UserMessage in Resources */ = {isa = PBXBuildFile; fileRef = 796A914A1D094CCB00FA96C6 /* UserMessage */; };
+		796A916D1D094CCB00FA96C6 /* 促销 in Resources */ = {isa = PBXBuildFile; fileRef = 796A914B1D094CCB00FA96C6 /* 促销 */; };
+		796A916E1D094CCB00FA96C6 /* 系统消息 in Resources */ = {isa = PBXBuildFile; fileRef = 796A914C1D094CCB00FA96C6 /* 系统消息 */; };
+		796A916F1D094CCB00FA96C6 /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 796A914D1D094CCB00FA96C6 /* 首页新鲜热卖 */; };
+		796A91701D094CCB00FA96C6 /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = 796A914E1D094CCB00FA96C6 /* 首页焦点按钮 */; };
+		796A91711D094CCB00FA96C6 /* XNHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91531D094CCB00FA96C6 /* XNHomeController.swift */; };
+		796A91721D094CCB00FA96C6 /* XNBaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91551D094CCB00FA96C6 /* XNBaseNavController.swift */; };
+		796A91731D094CCB00FA96C6 /* XNMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91561D094CCB00FA96C6 /* XNMainTabBarController.swift */; };
+		796A91741D094CCB00FA96C6 /* XNMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91581D094CCB00FA96C6 /* XNMineViewController.swift */; };
+		796A91751D094CCB00FA96C6 /* XNScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A915A1D094CCB00FA96C6 /* XNScheduleViewController.swift */; };
+		796A91761D094CCB00FA96C6 /* XNShopCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A915C1D094CCB00FA96C6 /* XNShopCartViewController.swift */; };
+		796A91771D094CCB00FA96C6 /* XNSupermarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A915E1D094CCB00FA96C6 /* XNSupermarketViewController.swift */; };
 		AEE54DE0F80F13B486C674F0 /* Pods_LoveFreshBeenX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD676BEE8F2ECEAC13AD6B4 /* Pods_LoveFreshBeenX.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +41,32 @@
 		3EEE3AC178BCDB956D086FFF /* Pods-LoveFreshBeenX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveFreshBeenX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveFreshBeenX/Pods-LoveFreshBeenX.debug.xcconfig"; sourceTree = "<group>"; };
 		796A91041D09480600FA96C6 /* LoveFreshBeenX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveFreshBeenX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		796A91071D09480600FA96C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		796A91091D09480600FA96C6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		796A910B1D09480600FA96C6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		796A910E1D09480600FA96C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		796A91101D09480600FA96C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		796A91131D09480600FA96C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		796A91151D09480600FA96C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		796A913E1D094CCB00FA96C6 /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AD; sourceTree = "<group>"; };
+		796A913F1D094CCB00FA96C6 /* FocusURL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FocusURL.plist; sourceTree = "<group>"; };
+		796A91401D094CCB00FA96C6 /* HelpPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HelpPlist.plist; sourceTree = "<group>"; };
+		796A91411D094CCB00FA96C6 /* Mine */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mine; sourceTree = "<group>"; };
+		796A91421D094CCB00FA96C6 /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MinePlist.plist; sourceTree = "<group>"; };
+		796A91431D094CCB00FA96C6 /* MyAdress */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyAdress; sourceTree = "<group>"; };
+		796A91441D094CCB00FA96C6 /* MyCoupon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyCoupon; sourceTree = "<group>"; };
+		796A91451D094CCB00FA96C6 /* MyOrders */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyOrders; sourceTree = "<group>"; };
+		796A91461D094CCB00FA96C6 /* Search */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Search; sourceTree = "<group>"; };
+		796A91471D094CCB00FA96C6 /* SearchProduct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SearchProduct; sourceTree = "<group>"; };
+		796A91481D094CCB00FA96C6 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = supermarket; sourceTree = "<group>"; };
+		796A91491D094CCB00FA96C6 /* SystemMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SystemMessage; sourceTree = "<group>"; };
+		796A914A1D094CCB00FA96C6 /* UserMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UserMessage; sourceTree = "<group>"; };
+		796A914B1D094CCB00FA96C6 /* 促销 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "促销"; sourceTree = "<group>"; };
+		796A914C1D094CCB00FA96C6 /* 系统消息 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "系统消息"; sourceTree = "<group>"; };
+		796A914D1D094CCB00FA96C6 /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页新鲜热卖"; sourceTree = "<group>"; };
+		796A914E1D094CCB00FA96C6 /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页焦点按钮"; sourceTree = "<group>"; };
+		796A91531D094CCB00FA96C6 /* XNHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNHomeController.swift; sourceTree = "<group>"; };
+		796A91551D094CCB00FA96C6 /* XNBaseNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNBaseNavController.swift; sourceTree = "<group>"; };
+		796A91561D094CCB00FA96C6 /* XNMainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNMainTabBarController.swift; sourceTree = "<group>"; };
+		796A91581D094CCB00FA96C6 /* XNMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNMineViewController.swift; sourceTree = "<group>"; };
+		796A915A1D094CCB00FA96C6 /* XNScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNScheduleViewController.swift; sourceTree = "<group>"; };
+		796A915C1D094CCB00FA96C6 /* XNShopCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNShopCartViewController.swift; sourceTree = "<group>"; };
+		796A915E1D094CCB00FA96C6 /* XNSupermarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNSupermarketViewController.swift; sourceTree = "<group>"; };
 		AFD676BEE8F2ECEAC13AD6B4 /* Pods_LoveFreshBeenX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveFreshBeenX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,14 +113,138 @@
 			isa = PBXGroup;
 			children = (
 				796A91071D09480600FA96C6 /* AppDelegate.swift */,
-				796A91091D09480600FA96C6 /* MasterViewController.swift */,
-				796A910B1D09480600FA96C6 /* DetailViewController.swift */,
-				796A910D1D09480600FA96C6 /* Main.storyboard */,
+				796A913B1D094CCB00FA96C6 /* Class */,
 				796A91101D09480600FA96C6 /* Assets.xcassets */,
-				796A91121D09480600FA96C6 /* LaunchScreen.storyboard */,
 				796A91151D09480600FA96C6 /* Info.plist */,
 			);
 			path = LoveFreshBeenX;
+			sourceTree = "<group>";
+		};
+		796A913B1D094CCB00FA96C6 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				796A913C1D094CCB00FA96C6 /* Model */,
+				796A913D1D094CCB00FA96C6 /* Resouce */,
+				796A914F1D094CCB00FA96C6 /* Schedule */,
+				796A91501D094CCB00FA96C6 /* Tools */,
+				796A91511D094CCB00FA96C6 /* View */,
+				796A915F1D094CCB00FA96C6 /* ViewModel */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		796A913C1D094CCB00FA96C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		796A913D1D094CCB00FA96C6 /* Resouce */ = {
+			isa = PBXGroup;
+			children = (
+				796A913E1D094CCB00FA96C6 /* AD */,
+				796A913F1D094CCB00FA96C6 /* FocusURL.plist */,
+				796A91401D094CCB00FA96C6 /* HelpPlist.plist */,
+				796A91411D094CCB00FA96C6 /* Mine */,
+				796A91421D094CCB00FA96C6 /* MinePlist.plist */,
+				796A91431D094CCB00FA96C6 /* MyAdress */,
+				796A91441D094CCB00FA96C6 /* MyCoupon */,
+				796A91451D094CCB00FA96C6 /* MyOrders */,
+				796A91461D094CCB00FA96C6 /* Search */,
+				796A91471D094CCB00FA96C6 /* SearchProduct */,
+				796A91481D094CCB00FA96C6 /* supermarket */,
+				796A91491D094CCB00FA96C6 /* SystemMessage */,
+				796A914A1D094CCB00FA96C6 /* UserMessage */,
+				796A914B1D094CCB00FA96C6 /* 促销 */,
+				796A914C1D094CCB00FA96C6 /* 系统消息 */,
+				796A914D1D094CCB00FA96C6 /* 首页新鲜热卖 */,
+				796A914E1D094CCB00FA96C6 /* 首页焦点按钮 */,
+			);
+			path = Resouce;
+			sourceTree = "<group>";
+		};
+		796A914F1D094CCB00FA96C6 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		796A91501D094CCB00FA96C6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		796A91511D094CCB00FA96C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				796A91521D094CCB00FA96C6 /* Home */,
+				796A91541D094CCB00FA96C6 /* LFBBase */,
+				796A91571D094CCB00FA96C6 /* Mine */,
+				796A91591D094CCB00FA96C6 /* Schedule */,
+				796A915B1D094CCB00FA96C6 /* ShopCart */,
+				796A915D1D094CCB00FA96C6 /* Supermarket */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		796A91521D094CCB00FA96C6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				796A91531D094CCB00FA96C6 /* XNHomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		796A91541D094CCB00FA96C6 /* LFBBase */ = {
+			isa = PBXGroup;
+			children = (
+				796A91551D094CCB00FA96C6 /* XNBaseNavController.swift */,
+				796A91561D094CCB00FA96C6 /* XNMainTabBarController.swift */,
+			);
+			path = LFBBase;
+			sourceTree = "<group>";
+		};
+		796A91571D094CCB00FA96C6 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				796A91581D094CCB00FA96C6 /* XNMineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		796A91591D094CCB00FA96C6 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				796A915A1D094CCB00FA96C6 /* XNScheduleViewController.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		796A915B1D094CCB00FA96C6 /* ShopCart */ = {
+			isa = PBXGroup;
+			children = (
+				796A915C1D094CCB00FA96C6 /* XNShopCartViewController.swift */,
+			);
+			path = ShopCart;
+			sourceTree = "<group>";
+		};
+		796A915D1D094CCB00FA96C6 /* Supermarket */ = {
+			isa = PBXGroup;
+			children = (
+				796A915E1D094CCB00FA96C6 /* XNSupermarketViewController.swift */,
+			);
+			path = Supermarket;
+			sourceTree = "<group>";
+		};
+		796A915F1D094CCB00FA96C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A8DA01AFEC2B11A821AA7CAE /* Frameworks */ = {
@@ -152,9 +316,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				796A91141D09480600FA96C6 /* LaunchScreen.storyboard in Resources */,
+				796A91651D094CCB00FA96C6 /* MyAdress in Resources */,
+				796A91611D094CCB00FA96C6 /* FocusURL.plist in Resources */,
 				796A91111D09480600FA96C6 /* Assets.xcassets in Resources */,
-				796A910F1D09480600FA96C6 /* Main.storyboard in Resources */,
+				796A916B1D094CCB00FA96C6 /* SystemMessage in Resources */,
+				796A916D1D094CCB00FA96C6 /* 促销 in Resources */,
+				796A916E1D094CCB00FA96C6 /* 系统消息 in Resources */,
+				796A91691D094CCB00FA96C6 /* SearchProduct in Resources */,
+				796A91631D094CCB00FA96C6 /* Mine in Resources */,
+				796A91661D094CCB00FA96C6 /* MyCoupon in Resources */,
+				796A916A1D094CCB00FA96C6 /* supermarket in Resources */,
+				796A91671D094CCB00FA96C6 /* MyOrders in Resources */,
+				796A916F1D094CCB00FA96C6 /* 首页新鲜热卖 in Resources */,
+				796A91681D094CCB00FA96C6 /* Search in Resources */,
+				796A91701D094CCB00FA96C6 /* 首页焦点按钮 in Resources */,
+				796A91621D094CCB00FA96C6 /* HelpPlist.plist in Resources */,
+				796A91641D094CCB00FA96C6 /* MinePlist.plist in Resources */,
+				796A91601D094CCB00FA96C6 /* AD in Resources */,
+				796A916C1D094CCB00FA96C6 /* UserMessage in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,32 +392,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				796A910C1D09480600FA96C6 /* DetailViewController.swift in Sources */,
-				796A910A1D09480600FA96C6 /* MasterViewController.swift in Sources */,
+				796A91731D094CCB00FA96C6 /* XNMainTabBarController.swift in Sources */,
+				796A91711D094CCB00FA96C6 /* XNHomeController.swift in Sources */,
+				796A91771D094CCB00FA96C6 /* XNSupermarketViewController.swift in Sources */,
+				796A91751D094CCB00FA96C6 /* XNScheduleViewController.swift in Sources */,
+				796A91721D094CCB00FA96C6 /* XNBaseNavController.swift in Sources */,
+				796A91761D094CCB00FA96C6 /* XNShopCartViewController.swift in Sources */,
+				796A91741D094CCB00FA96C6 /* XNMineViewController.swift in Sources */,
 				796A91081D09480600FA96C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		796A910D1D09480600FA96C6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				796A910E1D09480600FA96C6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		796A91121D09480600FA96C6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				796A91131D09480600FA96C6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		796A91161D09480600FA96C6 /* Debug */ = {
@@ -329,7 +494,9 @@
 			baseConfigurationReference = 3EEE3AC178BCDB956D086FFF /* Pods-LoveFreshBeenX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = LoveFreshBeenX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsuios.LoveFreshBeenX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -341,7 +508,9 @@
 			baseConfigurationReference = 033DC6914B92F6253A1FB8A5 /* Pods-LoveFreshBeenX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = LoveFreshBeenX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsuios.LoveFreshBeenX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
