@@ -33,6 +33,11 @@
 		796A91751D094CCB00FA96C6 /* XNScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A915A1D094CCB00FA96C6 /* XNScheduleViewController.swift */; };
 		796A91761D094CCB00FA96C6 /* XNShopCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A915C1D094CCB00FA96C6 /* XNShopCartViewController.swift */; };
 		796A91771D094CCB00FA96C6 /* XNSupermarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A915E1D094CCB00FA96C6 /* XNSupermarketViewController.swift */; };
+		796A91791D0963D600FA96C6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91781D0963D600FA96C6 /* Theme.swift */; };
+		796A917D1D09651200FA96C6 /* UIBarButtonItem+Exttension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A917C1D09651200FA96C6 /* UIBarButtonItem+Exttension.swift */; };
+		796A917F1D096A5800FA96C6 /* XNHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A917E1D096A5800FA96C6 /* XNHeaderView.swift */; };
+		796A91811D096D7000FA96C6 /* XNPageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91801D096D7000FA96C6 /* XNPageScrollView.swift */; };
+		796A91831D09757F00FA96C6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91821D09757F00FA96C6 /* UIView+Extension.swift */; };
 		AEE54DE0F80F13B486C674F0 /* Pods_LoveFreshBeenX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD676BEE8F2ECEAC13AD6B4 /* Pods_LoveFreshBeenX.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +72,11 @@
 		796A915A1D094CCB00FA96C6 /* XNScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNScheduleViewController.swift; sourceTree = "<group>"; };
 		796A915C1D094CCB00FA96C6 /* XNShopCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNShopCartViewController.swift; sourceTree = "<group>"; };
 		796A915E1D094CCB00FA96C6 /* XNSupermarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNSupermarketViewController.swift; sourceTree = "<group>"; };
+		796A91781D0963D600FA96C6 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		796A917C1D09651200FA96C6 /* UIBarButtonItem+Exttension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Exttension.swift"; sourceTree = "<group>"; };
+		796A917E1D096A5800FA96C6 /* XNHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNHeaderView.swift; sourceTree = "<group>"; };
+		796A91801D096D7000FA96C6 /* XNPageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNPageScrollView.swift; sourceTree = "<group>"; };
+		796A91821D09757F00FA96C6 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AFD676BEE8F2ECEAC13AD6B4 /* Pods_LoveFreshBeenX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveFreshBeenX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,7 +135,6 @@
 			children = (
 				796A913C1D094CCB00FA96C6 /* Model */,
 				796A913D1D094CCB00FA96C6 /* Resouce */,
-				796A914F1D094CCB00FA96C6 /* Schedule */,
 				796A91501D094CCB00FA96C6 /* Tools */,
 				796A91511D094CCB00FA96C6 /* View */,
 				796A915F1D094CCB00FA96C6 /* ViewModel */,
@@ -164,16 +173,12 @@
 			path = Resouce;
 			sourceTree = "<group>";
 		};
-		796A914F1D094CCB00FA96C6 /* Schedule */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Schedule;
-			sourceTree = "<group>";
-		};
 		796A91501D094CCB00FA96C6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				796A91821D09757F00FA96C6 /* UIView+Extension.swift */,
+				796A91781D0963D600FA96C6 /* Theme.swift */,
+				796A917C1D09651200FA96C6 /* UIBarButtonItem+Exttension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -195,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				796A91531D094CCB00FA96C6 /* XNHomeController.swift */,
+				796A917E1D096A5800FA96C6 /* XNHeaderView.swift */,
+				796A91801D096D7000FA96C6 /* XNPageScrollView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -284,12 +291,14 @@
 		796A90FC1D09480600FA96C6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XN;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = hus;
 				TargetAttributes = {
 					796A91031D09480600FA96C6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = E4GB64UNGY;
 					};
 				};
 			};
@@ -392,6 +401,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				796A917D1D09651200FA96C6 /* UIBarButtonItem+Exttension.swift in Sources */,
+				796A91831D09757F00FA96C6 /* UIView+Extension.swift in Sources */,
+				796A917F1D096A5800FA96C6 /* XNHeaderView.swift in Sources */,
+				796A91791D0963D600FA96C6 /* Theme.swift in Sources */,
 				796A91731D094CCB00FA96C6 /* XNMainTabBarController.swift in Sources */,
 				796A91711D094CCB00FA96C6 /* XNHomeController.swift in Sources */,
 				796A91771D094CCB00FA96C6 /* XNSupermarketViewController.swift in Sources */,
@@ -399,6 +412,7 @@
 				796A91721D094CCB00FA96C6 /* XNBaseNavController.swift in Sources */,
 				796A91761D094CCB00FA96C6 /* XNShopCartViewController.swift in Sources */,
 				796A91741D094CCB00FA96C6 /* XNMineViewController.swift in Sources */,
+				796A91811D096D7000FA96C6 /* XNPageScrollView.swift in Sources */,
 				796A91081D09480600FA96C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,8 +509,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LoveFreshBeenX/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsuios.LoveFreshBeenX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,8 +524,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LoveFreshBeenX/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsuios.LoveFreshBeenX;
 				PRODUCT_NAME = "$(TARGET_NAME)";

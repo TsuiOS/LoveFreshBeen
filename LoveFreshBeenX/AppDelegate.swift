@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         window?.makeKeyAndVisible()
         
         
+        UINavigationBar.appearance().translucent = false
+        
         return true
     }
 

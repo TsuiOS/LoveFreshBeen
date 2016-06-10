@@ -9,28 +9,56 @@
 import UIKit
 
 class XNHomeController: UIViewController {
-
+    
+    var headerView: XNHeaderView?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.redColor()
+        
+        buildNavigationItem()
+        buildTableHeaderView()
 
-        // Do any additional setup after loading the view.
+      
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+
+}
+
+// MARK: - 设置界面
+
+extension XNHomeController {
+
+    private func buildNavigationItem() {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_black_scancode"), style: .Plain, target: self, action: #selector(XNHomeController.leftItemClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_search"), style: .Plain, target: self, action: #selector(XNHomeController.rightItemClick))
     }
-    */
+    
+    
+    
+    func buildTableHeaderView() {
+        
+        headerView = XNHeaderView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 150))
+        
+        view.addSubview(headerView!)
+        
+    }
+    
+    
+    func leftItemClick() {
+        print("左")
+    }
+    func rightItemClick() {
+        print("左")
+    }
+    
 
 }
