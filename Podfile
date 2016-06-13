@@ -7,6 +7,7 @@ target 'LoveFreshBeenX' do
 pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
+pod 'SnapKit'
   # Pods for LoveFreshBeenX
 
 end

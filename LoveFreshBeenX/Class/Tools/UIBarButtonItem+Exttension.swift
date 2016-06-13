@@ -15,7 +15,23 @@ enum ItemButtonType: Int {
 
 extension UIBarButtonItem {
     
-//    class func barButton(title: String, tit)
-
+    ///  便利构造函数
+    ///
+    ///  - parameter imageName: 图像名
+    ///  - parameter title:     文字
+    ///  - parameter target:    监听对象
+    ///  - parameter action:    监听对象名
+    ///
+    ///  - returns: UIBarButtonItem
+    convenience init(imageName: String?, title: String, target: AnyObject?, action: Selector) {
+        
+        let button = XNCustomButton(title: title, color: UIColor.blackColor(), fontSize: 10, imageName: imageName!)
+        button.frame = CGRectMake(0, 0, 50, 44)
+        
+        button.addTarget(target, action: action, forControlEvents: .TouchUpInside)
+        
+        self.init(customView: button)
+    }
+    
 
 }

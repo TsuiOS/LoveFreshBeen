@@ -38,6 +38,11 @@
 		796A917F1D096A5800FA96C6 /* XNHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A917E1D096A5800FA96C6 /* XNHeaderView.swift */; };
 		796A91811D096D7000FA96C6 /* XNPageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91801D096D7000FA96C6 /* XNPageScrollView.swift */; };
 		796A91831D09757F00FA96C6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91821D09757F00FA96C6 /* UIView+Extension.swift */; };
+		796DA7891D0E5DA100907775 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DA7881D0E5DA100907775 /* UIButton+Extension.swift */; };
+		79DFD9761D0E612C00DFCE0E /* XNCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFD9751D0E612C00DFCE0E /* XNCustomButton.swift */; };
+		79E6ED711D0A704700AA1DFC /* XNMineHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6ED701D0A704700AA1DFC /* XNMineHeadView.swift */; };
+		79E6ED751D0A714700AA1DFC /* XNMineTableHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6ED741D0A714700AA1DFC /* XNMineTableHeadView.swift */; };
+		79E6ED771D0A71A300AA1DFC /* XNMineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6ED761D0A71A300AA1DFC /* XNMineCell.swift */; };
 		AEE54DE0F80F13B486C674F0 /* Pods_LoveFreshBeenX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD676BEE8F2ECEAC13AD6B4 /* Pods_LoveFreshBeenX.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +82,11 @@
 		796A917E1D096A5800FA96C6 /* XNHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNHeaderView.swift; sourceTree = "<group>"; };
 		796A91801D096D7000FA96C6 /* XNPageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNPageScrollView.swift; sourceTree = "<group>"; };
 		796A91821D09757F00FA96C6 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		796DA7881D0E5DA100907775 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		79DFD9751D0E612C00DFCE0E /* XNCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNCustomButton.swift; sourceTree = "<group>"; };
+		79E6ED701D0A704700AA1DFC /* XNMineHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNMineHeadView.swift; sourceTree = "<group>"; };
+		79E6ED741D0A714700AA1DFC /* XNMineTableHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNMineTableHeadView.swift; sourceTree = "<group>"; };
+		79E6ED761D0A71A300AA1DFC /* XNMineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNMineCell.swift; sourceTree = "<group>"; };
 		AFD676BEE8F2ECEAC13AD6B4 /* Pods_LoveFreshBeenX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveFreshBeenX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,6 +189,7 @@
 				796A91821D09757F00FA96C6 /* UIView+Extension.swift */,
 				796A91781D0963D600FA96C6 /* Theme.swift */,
 				796A917C1D09651200FA96C6 /* UIBarButtonItem+Exttension.swift */,
+				796DA7881D0E5DA100907775 /* UIButton+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -211,6 +222,7 @@
 			children = (
 				796A91551D094CCB00FA96C6 /* XNBaseNavController.swift */,
 				796A91561D094CCB00FA96C6 /* XNMainTabBarController.swift */,
+				79DFD9751D0E612C00DFCE0E /* XNCustomButton.swift */,
 			);
 			path = LFBBase;
 			sourceTree = "<group>";
@@ -219,6 +231,9 @@
 			isa = PBXGroup;
 			children = (
 				796A91581D094CCB00FA96C6 /* XNMineViewController.swift */,
+				79E6ED701D0A704700AA1DFC /* XNMineHeadView.swift */,
+				79E6ED741D0A714700AA1DFC /* XNMineTableHeadView.swift */,
+				79E6ED761D0A71A300AA1DFC /* XNMineCell.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -298,7 +313,7 @@
 				TargetAttributes = {
 					796A91031D09480600FA96C6 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = E4GB64UNGY;
+						DevelopmentTeam = J7H6SN66AX;
 					};
 				};
 			};
@@ -403,15 +418,20 @@
 			files = (
 				796A917D1D09651200FA96C6 /* UIBarButtonItem+Exttension.swift in Sources */,
 				796A91831D09757F00FA96C6 /* UIView+Extension.swift in Sources */,
+				79DFD9761D0E612C00DFCE0E /* XNCustomButton.swift in Sources */,
 				796A917F1D096A5800FA96C6 /* XNHeaderView.swift in Sources */,
+				796DA7891D0E5DA100907775 /* UIButton+Extension.swift in Sources */,
 				796A91791D0963D600FA96C6 /* Theme.swift in Sources */,
 				796A91731D094CCB00FA96C6 /* XNMainTabBarController.swift in Sources */,
+				79E6ED751D0A714700AA1DFC /* XNMineTableHeadView.swift in Sources */,
 				796A91711D094CCB00FA96C6 /* XNHomeController.swift in Sources */,
 				796A91771D094CCB00FA96C6 /* XNSupermarketViewController.swift in Sources */,
 				796A91751D094CCB00FA96C6 /* XNScheduleViewController.swift in Sources */,
 				796A91721D094CCB00FA96C6 /* XNBaseNavController.swift in Sources */,
+				79E6ED771D0A71A300AA1DFC /* XNMineCell.swift in Sources */,
 				796A91761D094CCB00FA96C6 /* XNShopCartViewController.swift in Sources */,
 				796A91741D094CCB00FA96C6 /* XNMineViewController.swift in Sources */,
+				79E6ED711D0A704700AA1DFC /* XNMineHeadView.swift in Sources */,
 				796A91811D096D7000FA96C6 /* XNPageScrollView.swift in Sources */,
 				796A91081D09480600FA96C6 /* AppDelegate.swift in Sources */,
 			);
@@ -510,11 +530,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LoveFreshBeenX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tsuios.LoveFreshBeenX;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsuios.hsu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -525,11 +547,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LoveFreshBeenX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tsuios.LoveFreshBeenX;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsuios.hsu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

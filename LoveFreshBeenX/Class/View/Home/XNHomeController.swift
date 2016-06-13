@@ -7,7 +7,12 @@
 //
 
 import UIKit
-
+private extension Selector {
+    
+    static let leftItemClick = #selector(XNHomeController.leftItemClick)
+    static let rightItemClick = #selector(XNHomeController.rightItemClick)
+    
+}
 class XNHomeController: UIViewController {
     
     var headerView: XNHeaderView?
@@ -35,15 +40,18 @@ class XNHomeController: UIViewController {
 extension XNHomeController {
 
     private func buildNavigationItem() {
-    
+        
+        
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_black_scancode"), style: .Plain, target: self, action: #selector(XNHomeController.leftItemClick))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_search"), style: .Plain, target: self, action: #selector(XNHomeController.rightItemClick))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "icon_black_scancode", title: "扫一扫", target: self, action: .leftItemClick)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "icon_search", title: "搜索", target: self, action: .rightItemClick)
+    
+        
     }
-    
-    
-    
+   
+ 
     func buildTableHeaderView() {
         
         headerView = XNHeaderView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 150))
@@ -60,5 +68,9 @@ extension XNHomeController {
         print("左")
     }
     
+    
 
 }
+
+
+
