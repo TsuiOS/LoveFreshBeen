@@ -13,22 +13,20 @@ class XNCustomButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        let margin: CGFloat = 5
+        let buttonH = (imageView?.height)! + (titleLabel?.height)!
+        let imageY = (height - buttonH - margin) / 2
         
         // center image
-        var center: CGPoint = (imageView?.center)!
-        center.x = width/2
-        center.y = (imageView?.frame.size.height)!/2
-        imageView?.center = center
+        imageView?.center = CGPointMake(width/2, 0)
+        imageView?.frame.origin.y = imageY
         
         // center text
-        var newFrame = titleLabel?.frame
-        newFrame?.origin.x = 0
-        newFrame?.origin.y = CGRectGetMaxY((imageView?.frame)!) + 5
-        newFrame?.size.width = width
-        
-        titleLabel?.frame = newFrame!
+        titleLabel?.frame.origin = CGPointMake(0, CGRectGetMaxY((imageView?.frame)!) + margin)
+        titleLabel?.frame.size = CGSizeMake(width, (titleLabel?.height)!)
+
         titleLabel?.textAlignment = .Center
         
     }
-
+    
 }

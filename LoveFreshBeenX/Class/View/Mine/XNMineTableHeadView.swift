@@ -53,14 +53,11 @@ extension XNMineTableHeadView {
         addSubview(couponButton)
         addSubview(messageButton)
         
-        let margin = (height - 46)/2
-        
-        print(orderButton.height)
-        
+
         //自动布局
         orderButton.snp_makeConstraints { (make) in
             make.left.bottom.equalTo(self)
-            make.top.equalTo(self.snp_top).offset(margin)
+            make.top.equalTo(self.snp_top)
         }
         couponButton.snp_makeConstraints { (make) in
             make.top.width.height.equalTo(orderButton)
