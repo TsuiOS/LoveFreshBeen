@@ -17,3 +17,5 @@ public let LFBNavigationYellowColor = UIColor.colorWithCustom(253, g: 212, b: 49
 public let HomeCollectionViewCellMargin: CGFloat = 10
 public let HotViewMargin: CGFloat = 10
 public let HomeTableHeadViewHeightDidChange = "HomeTableHeadViewHeightDidChange"
+public let HomeCollectionTextFont = UIFont.systemFontOfSize(14)
+

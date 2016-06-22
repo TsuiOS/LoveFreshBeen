@@ -8,6 +8,14 @@
 
 import UIKit
 
+
+private extension Selector {
+    
+    static let iconClick = #selector(XNHomeHotView.iconClick(_:))
+
+    
+}
+
 class XNHomeHotView: UIView {
     
     
@@ -44,8 +52,7 @@ class XNHomeHotView: UIView {
                     let icon = XNCustomButton(title: headData!.icons![i].name!, color: UIColor.blackColor(), fontSize: 13, imageName: "icon_icons_holder")
                     icon.frame = CGRectMake(iconX, iconY, iconW, iconH)
                     icon.tag = i
-                    
-                    
+                    icon.addTarget(self, action: .iconClick, forControlEvents: .TouchUpInside)
                     addSubview(icon)
                 }
                 
@@ -63,4 +70,11 @@ class XNHomeHotView: UIView {
             bounds = CGRectMake(0, 0, ScreenWidth, iconH * CGFloat(newValue))
         }
     }
+    
+    
+    func iconClick(button: UIButton) {
+    
+        print(button.tag)
+    }
+    
 }

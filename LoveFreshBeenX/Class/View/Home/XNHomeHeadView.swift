@@ -22,14 +22,11 @@ class XNHomeHeadView: UIView {
     
     
     var headData: XNHeadResources? {
-        
         didSet {
             hotView?.headData = headData?.data
         }
     }
-    
-    
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
