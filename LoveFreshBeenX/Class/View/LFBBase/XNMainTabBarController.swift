@@ -12,9 +12,10 @@ class XNMainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = LFBGlobalBackgroundColor
+
         addSubControllers()
-        
+
     
     }
 

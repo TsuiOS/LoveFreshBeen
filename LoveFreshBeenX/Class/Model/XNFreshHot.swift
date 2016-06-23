@@ -11,6 +11,7 @@ import UIKit
 class XNFreshHot: Reflect {
     
     var page: Int = -1
+    
     var code: Int = -1
     var msg: String?
     var data: [Goods]?
@@ -22,7 +23,6 @@ class XNFreshHot: Reflect {
             let dict: NSDictionary = (try! NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)) as! NSDictionary
             let data = XNFreshHot.parse(dict: dict)
             completion(data: data, error: nil)
-            print(data)
         }
     }
     

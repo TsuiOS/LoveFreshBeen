@@ -50,6 +50,7 @@
 		796A91831D09757F00FA96C6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91821D09757F00FA96C6 /* UIView+Extension.swift */; };
 		796DA7891D0E5DA100907775 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DA7881D0E5DA100907775 /* UIButton+Extension.swift */; };
 		79986D091D1A9AA300690C5F /* XNFreshHot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986D081D1A9AA300690C5F /* XNFreshHot.swift */; };
+		79B350FF1D1B87F00032A1F2 /* XNDiscountPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B350FE1D1B87F00032A1F2 /* XNDiscountPriceView.swift */; };
 		79DFD9761D0E612C00DFCE0E /* XNCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFD9751D0E612C00DFCE0E /* XNCustomButton.swift */; };
 		79DFD9781D0EA72F00DFCE0E /* XNHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFD9771D0EA72F00DFCE0E /* XNHomeCell.swift */; };
 		79DFD97A1D0EA84900DFCE0E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFD9791D0EA84900DFCE0E /* UIColor+Extension.swift */; };
@@ -107,6 +108,7 @@
 		796A91821D09757F00FA96C6 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		796DA7881D0E5DA100907775 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		79986D081D1A9AA300690C5F /* XNFreshHot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNFreshHot.swift; sourceTree = "<group>"; };
+		79B350FE1D1B87F00032A1F2 /* XNDiscountPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNDiscountPriceView.swift; sourceTree = "<group>"; };
 		79DFD9751D0E612C00DFCE0E /* XNCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNCustomButton.swift; sourceTree = "<group>"; };
 		79DFD9771D0EA72F00DFCE0E /* XNHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNHomeCell.swift; sourceTree = "<group>"; };
 		79DFD9791D0EA84900DFCE0E /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				796A91801D096D7000FA96C6 /* XNPageScrollView.swift */,
 				796220AE1D10E1E8007FD40A /* XNHomeHotView.swift */,
 				79DFD9771D0EA72F00DFCE0E /* XNHomeCell.swift */,
+				79B350FE1D1B87F00032A1F2 /* XNDiscountPriceView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				794A12DB1D191D8D00885999 /* Reflect+Type.swift in Sources */,
 				79E6ED751D0A714700AA1DFC /* XNMineTableHeadView.swift in Sources */,
 				796A91711D094CCB00FA96C6 /* XNHomeController.swift in Sources */,
+				79B350FF1D1B87F00032A1F2 /* XNDiscountPriceView.swift in Sources */,
 				796A91771D094CCB00FA96C6 /* XNSupermarketViewController.swift in Sources */,
 				79DFD9781D0EA72F00DFCE0E /* XNHomeCell.swift in Sources */,
 				796A91751D094CCB00FA96C6 /* XNScheduleViewController.swift in Sources */,

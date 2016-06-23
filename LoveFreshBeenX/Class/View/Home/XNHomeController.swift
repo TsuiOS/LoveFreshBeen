@@ -26,6 +26,8 @@ class XNHomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = LFBGlobalBackgroundColor
+        
         addHomeNotification()
         
         buildNavigationItem()
@@ -79,7 +81,7 @@ extension XNHomeController {
         collectionView = UICollectionView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight - 64), collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = UIColor.whiteColor()
+        collectionView.backgroundColor = LFBGlobalBackgroundColor
 
         collectionView.registerClass(XNHomeCell.self, forCellWithReuseIdentifier: "home_cell")
         view.addSubview(collectionView)
@@ -102,7 +104,7 @@ extension XNHomeController {
         XNFreshHot.loadFreshHotData { (data, error) in
             self.freshHot = data
             self.collectionView.reloadData()
-            print(data)
+
         }
         
     }
@@ -132,10 +134,9 @@ extension XNHomeController:UICollectionViewDelegate,UICollectionViewDataSource,U
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if 0 == section {
-            print(headData?.data?.activities?.count)
             return headData?.data?.activities?.count ?? 0;
         } else if 1 == section {
-            return 20
+            return freshHot?.data?.count ?? 0
         }
         return 0
     }
@@ -148,6 +149,7 @@ extension XNHomeController:UICollectionViewDelegate,UICollectionViewDataSource,U
             cell.activities = headData!.data!.activities![indexPath.row]
         } else if indexPath.section == 1 {
             
+            cell.goods = freshHot!.data![indexPath.row]
         }
         
         return cell
