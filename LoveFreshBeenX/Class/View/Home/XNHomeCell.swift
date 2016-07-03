@@ -107,7 +107,7 @@ class XNHomeCell: UICollectionViewCell {
             backImageView.sd_setImageWithURL(NSURL(string: activities!.img!), placeholderImage: UIImage(named: "v2_placeholder_full_size"))
         }
     }
-    var goods: Goods? {
+    var goods: XNGoods? {
         didSet {
         
             self.type = HomeCellType.Vertical

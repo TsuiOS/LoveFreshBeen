@@ -66,7 +66,7 @@ extension XNProductsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
      
         let cell = XNProductCell.productCellWithTableView(tableView)
-        cell.textLabel?.text = goodArray![indexPath.row].name
+        cell.goods = goodArray![indexPath.row]
         return cell
         
     }

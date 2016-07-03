@@ -14,7 +14,7 @@ class XNFreshHot: Reflect {
     
     var code: Int = -1
     var msg: String?
-    var data: [Goods]?
+    var data: [XNGoods]?
     
     class func loadFreshHotData(completion:(data: XNFreshHot?, error: NSError?) -> Void) {
         let path = NSBundle.mainBundle().pathForResource("首页新鲜热卖", ofType: nil)
@@ -28,7 +28,7 @@ class XNFreshHot: Reflect {
     
 }
 
-class Goods: Reflect{
+class XNGoods: Reflect{
     //*************************商品模型默认属性**********************************
     /// 商品ID
     var id: String?
@@ -57,6 +57,8 @@ class Goods: Reflect{
     var pm_desc: String?
     /// urlStr
     var img: String?
+    /// 是不是精选 0 : 不是, 1 : 是
+    var is_xf: Int = 0
     
     //*************************商品模型辅助属性**********************************
     // 记录用户对商品添加次数

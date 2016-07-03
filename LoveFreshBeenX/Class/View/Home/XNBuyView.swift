@@ -110,7 +110,7 @@ class XNBuyView: UIView {
     }
     
     ///  商品模型set方法
-    var goods: Goods? {
+    var goods: XNGoods? {
     
         didSet {
             buyNumber = goods!.userBuyNumber
@@ -131,6 +131,7 @@ class XNBuyView: UIView {
         }
     
     }
+
     
     /// 显示补货中
     private func showSupplementLabel() {
