@@ -75,15 +75,16 @@ extension XNSupermarketViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = XNCategoryCell.categoryCellWithTableView(tableView)
         cell.category = supermarketData!.data!.categories![indexPath.row]
         ///  初始化indexPath.row = 0的数据
-        if indexPath.row == 0 {
-            productsVC.name = supermarketData?.data?.categories![0].id
-        }
+        let selectedIndexPath = tableView.indexPathForSelectedRow
+        productsVC.name = supermarketData?.data?.categories![selectedIndexPath!.row].id
+    
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if productsVC != nil {
             productsVC.name = supermarketData?.data?.categories![indexPath.row].id
+            productsVC.categorySelectedIndexPath = indexPath
         }
     }
 }

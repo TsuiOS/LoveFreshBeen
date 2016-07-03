@@ -15,19 +15,24 @@ class XNProductsViewController: UIViewController {
     
     var name: String? {
         didSet {
-            let products = supermarketData?.data?.products
-            goodArray = products!.valueForKey(name!) as? [XNGoods]
+            if name != nil {
+                let products = supermarketData?.data?.products
+                goodArray = products!.valueForKey(name!) as? [XNGoods]
+            }
         }
     }
     
     var goodArray: [XNGoods]? {
         didSet {
             productsTableView?.reloadData()
+        }
+    }
+    
+    var categorySelectedIndexPath: NSIndexPath? {
+        didSet {
             productsTableView?.scrollToRowAtIndexPath(NSIndexPath(forRow: 0,inSection: 0), atScrollPosition: .Top, animated: true)
         }
     }
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,7 +66,6 @@ extension XNProductsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
      
         let cell = XNProductCell.productCellWithTableView(tableView)
-        
         cell.textLabel?.text = goodArray![indexPath.row].name
         return cell
         
