@@ -60,7 +60,7 @@ extension Reflect{
                 if !type.isArray {
                     
                     if !type.isReflect {
-                        print("==========\(type.realType),\(type.isOptional)")
+//                        print("==========\(type.realType),\(type.isOptional)")
                         if type.typeClass == Bool.self { //bool
                             
                             model.setValue(dict[key]?.boolValue, forKeyPath: name)

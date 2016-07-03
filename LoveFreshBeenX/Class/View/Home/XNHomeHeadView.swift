@@ -23,6 +23,7 @@ class XNHomeHeadView: UIView {
     
     var headData: XNHeadResources? {
         didSet {
+            pageScrollView?.headData = headData
             hotView?.headData = headData?.data
         }
     }
@@ -41,7 +42,6 @@ class XNHomeHeadView: UIView {
     private func buildPageScrollView() {
     
         pageScrollView = XNPageScrollView(frame: CGRectZero, placeholder: UIImage(named: "v2_placeholder_full_size")!)
-        pageScrollView?.imageURLString = ["1","2","3","4","5"]
         addSubview(pageScrollView!)
     }
     

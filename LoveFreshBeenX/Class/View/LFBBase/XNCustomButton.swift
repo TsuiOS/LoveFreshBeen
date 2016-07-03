@@ -14,7 +14,7 @@ class XNCustomButton: UIButton {
         super.layoutSubviews()
         
         let margin: CGFloat = 5
-        let buttonH = (imageView?.height)! + (titleLabel?.height)!
+        let buttonH = (imageView?.height)! + (titleLabel?.height)!    
         let imageY = (height - buttonH - margin) / 2
         
         // center image

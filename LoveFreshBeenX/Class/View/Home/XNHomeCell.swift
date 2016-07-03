@@ -24,6 +24,7 @@ class XNHomeCell: UICollectionViewCell {
     // 产品图
     private lazy var goodsImageView: UIImageView = {
         let goodsImageView = UIImageView()
+        goodsImageView.contentMode = UIViewContentMode.ScaleAspectFit
         return goodsImageView
     }()
     
@@ -59,7 +60,13 @@ class XNHomeCell: UICollectionViewCell {
         return specificsLabel
     }()
     
-    // TODO 
+    // TODO
+    private var discountPriceView: XNDiscountPriceView?
+    
+    private lazy var buyView: XNBuyView = {
+        let buyView = XNBuyView()
+        return buyView
+    }()
     
     private var type: HomeCellType? {
         didSet {
@@ -67,7 +74,10 @@ class XNHomeCell: UICollectionViewCell {
             goodsImageView.hidden = (type == HomeCellType.Horizontal)
             nameLabel.hidden = (type == HomeCellType.Horizontal)
             fineImageView.hidden = (type == HomeCellType.Horizontal)
+            giveImageView.hidden = (type == HomeCellType.Horizontal)
             specificsLabel.hidden = (type == HomeCellType.Horizontal)
+            discountPriceView?.hidden = (type == HomeCellType.Horizontal)
+            buyView.hidden = (type == HomeCellType.Horizontal)
        
         }
     }
@@ -75,13 +85,15 @@ class XNHomeCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor.whiteColor()
-
+        
         contentView.addSubview(backImageView)
         contentView.addSubview(goodsImageView)
         contentView.addSubview(nameLabel)
         contentView.addSubview(fineImageView)
         contentView.addSubview(giveImageView)
         contentView.addSubview(specificsLabel)
+        contentView.addSubview(buyView)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -92,14 +104,14 @@ class XNHomeCell: UICollectionViewCell {
     var activities: Activities? {
         didSet {
             self.type = HomeCellType.Horizontal
-            backImageView.image = UIImage(named: "v2_placeholder_full_size")
+            backImageView.sd_setImageWithURL(NSURL(string: activities!.img!), placeholderImage: UIImage(named: "v2_placeholder_full_size"))
         }
     }
     var goods: Goods? {
         didSet {
         
             self.type = HomeCellType.Vertical
-            goodsImageView.image = UIImage(named: "v2_placeholder_square")
+            goodsImageView.sd_setImageWithURL(NSURL(string: goods!.img!), placeholderImage: UIImage(named: "v2_placeholder_square"))
             nameLabel.text = goods?.name
             if goods!.pm_desc == "买一赠一" {
                 giveImageView.hidden = false
@@ -107,8 +119,16 @@ class XNHomeCell: UICollectionViewCell {
                 giveImageView.hidden = true
             }
             
+            if discountPriceView != nil {
+                discountPriceView?.removeFromSuperview()
+            }
+            discountPriceView = XNDiscountPriceView(price: goods!.price, marketPrice: goods?.market_price)
+            
+            contentView.addSubview(discountPriceView!)
+            contentView.bringSubviewToFront(buyView)
             specificsLabel.text = goods?.specifics
-
+            buyView.goods = goods
+            
         }
         
     }
@@ -119,11 +139,8 @@ class XNHomeCell: UICollectionViewCell {
         super.layoutSubviews()
         
         ///  这里加判断是为了控制台约束警告的问题
-        
         if self.type == HomeCellType.Horizontal {
-            backImageView.snp_makeConstraints { (make) in
-                make.edges.equalTo(self)
-            }
+            backImageView.frame = bounds
         }
         
         if self.type == HomeCellType.Vertical {
@@ -148,7 +165,7 @@ class XNHomeCell: UICollectionViewCell {
                 make.height.equalTo(15)
             })
             
-            //买一送一
+            //买一赠送
             giveImageView.snp_makeConstraints(closure: { (make) in
                 make.top.equalTo(fineImageView)
                 make.left.equalTo(fineImageView.snp_right).offset(3)
@@ -159,25 +176,26 @@ class XNHomeCell: UICollectionViewCell {
             //产品规格
             specificsLabel.snp_makeConstraints(closure: { (make) in
                 make.top.equalTo(fineImageView.snp_bottom)
-                make.left.equalTo(nameLabel)
-                make.width.equalTo(width)
+                make.left.right.equalTo(nameLabel)
                 make.height.equalTo(20)
             })
-
-            
+            //价格标签
+            discountPriceView?.snp_makeConstraints(closure: { (make) in
+                make.left.right.equalTo(nameLabel)
+                make.top.equalTo(specificsLabel.snp_bottom)
+                make.bottom.equalTo(self)
+            })
+            //购买
+            buyView.snp_makeConstraints(closure: { (make) in
+                make.right.equalTo(nameLabel)
+                make.bottom.equalTo(self).offset(-2)
+                make.height.equalTo(25)
+                make.width.equalTo(width-85)
+                
+            })
             
 
         }
     }
-
-}
-
-
-extension XNHomeCell {
-
-
-    
-
-    
 
 }

@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import SVProgressHUD
+
 private extension Selector {
     
     static let leftItemClick = #selector(XNHomeController.leftItemClick)
     static let rightItemClick = #selector(XNHomeController.rightItemClick)
     static let homeTableHeadViewHeightDidChange = #selector(XNHomeController.homeTableHeadViewHeightDidChange(_:))
+    static let goodsInventoryProblem = #selector(XNHomeController.goodsInventoryProblem(_:))
+    static let moreGoodsClickik = #selector(XNHomeController.moreGoodsClickik(_:))
+    
     
 }
 class XNHomeController: UIViewController {
@@ -55,6 +60,7 @@ extension XNHomeController {
     
     func addHomeNotification() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: .homeTableHeadViewHeightDidChange , name: HomeTableHeadViewHeightDidChange, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: .goodsInventoryProblem, name: GoodsInventoryProblem, object: nil)
     }
     
     private func buildNavigationItem() {
@@ -84,6 +90,8 @@ extension XNHomeController {
         collectionView.backgroundColor = LFBGlobalBackgroundColor
 
         collectionView.registerClass(XNHomeCell.self, forCellWithReuseIdentifier: "home_cell")
+        collectionView.registerClass(HomeCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView")
+        collectionView.registerClass(HomeCollectionFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView")
         view.addSubview(collectionView)
     
     }
@@ -122,6 +130,17 @@ extension XNHomeController {
         collectionView.setContentOffset(CGPointMake(0, -(collectionView.contentInset.top)), animated: false)
     }
     
+    ///  库存提示
+    func goodsInventoryProblem(noti: NSNotification) {
+        
+        if let goodsName = noti.object as? String {
+            
+            SVProgressHUD.showImage(UIImage(named: "v2_orderSuccess"), status: goodsName + "  库存不足了\n先买这么多, 过段时间再来看看吧~")
+            
+        }
+        
+    }
+    
 
 }
 
@@ -145,6 +164,7 @@ extension XNHomeController:UICollectionViewDelegate,UICollectionViewDataSource,U
         
         let  cell = collectionView.dequeueReusableCellWithReuseIdentifier("home_cell", forIndexPath: indexPath) as! XNHomeCell
         
+
         if indexPath.section == 0 {
             cell.activities = headData!.data!.activities![indexPath.row]
         } else if indexPath.section == 1 {
@@ -183,19 +203,41 @@ extension XNHomeController:UICollectionViewDelegate,UICollectionViewDataSource,U
         if section == 0 {
             return CGSizeMake(ScreenWidth, HomeCollectionViewCellMargin)
         } else if section == 1 {
-            return CGSizeMake(ScreenWidth, HomeCollectionViewCellMargin * 8)
+            return CGSizeMake(ScreenWidth, HomeCollectionViewCellMargin * 5)
         }
         
         return CGSizeZero
     }
     
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        if indexPath.section == 1 && kind == UICollectionElementKindSectionHeader  {
+            let headView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView", forIndexPath: indexPath) as! HomeCollectionHeaderView
+            return headView
+        }
+        
+        let footerView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView", forIndexPath: indexPath) as! HomeCollectionFooterView
+        
+        if indexPath.section == 1 && kind == UICollectionElementKindSectionFooter {
+            footerView.showLabel()
+            footerView.tag = 100
+        } else {
+            footerView.hideLabel()
+            footerView.tag = 1
+        }
+        
+        let tap = UITapGestureRecognizer(target: self, action: .moreGoodsClickik)
+        footerView.addGestureRecognizer(tap)
+        
+        return footerView
+    }
     
-    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
-        if lastContentOffsetY <= collectionView.contentOffset.y {
+    func moreGoodsClickik(tap: UITapGestureRecognizer) {
+        
+        if tap.view?.tag == 100 {
+            let tabBarController = UIApplication.sharedApplication().keyWindow?.rootViewController as! XNMainTabBarController
             
-            //Animation
+            tabBarController.selectedIndex = 1
             
-            lastContentOffsetY = collectionView.contentOffset.y
         }
     }
 

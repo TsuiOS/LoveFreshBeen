@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class XNPageScrollView: UIView {
 
@@ -17,15 +18,14 @@ class XNPageScrollView: UIView {
     private var placeholderImage: UIImage?
     
     
-    var imageURLString: [String]? {
+    var headData: XNHeadResources? {
         didSet {
-            
-            print(imageURLString?.count)
-            pageContorl.numberOfPages = imageURLString!.count
-            pageContorl.currentPage = 0
-            
-            updatePageScrollView()
-            startTimer()
+            if headData?.data?.focus?.count >= 0 {
+                pageContorl.numberOfPages = (headData?.data?.focus?.count)!
+                pageContorl.currentPage = 0
+                updatePageScrollView()
+                startTimer()
+            }
         }
     }
     
@@ -95,7 +95,10 @@ extension XNPageScrollView {
                 index = 0
             }
             imageView.tag = index
-            imageView.image = placeholderImage
+            if headData?.data?.focus?.count > 0 {
+                imageView.sd_setImageWithURL(NSURL(string: (headData?.data?.focus![index].img)!), placeholderImage: placeholderImage)
+            }
+   
         }
         imageScrollView.contentOffset = CGPointMake(imageScrollView.width, 0)
 

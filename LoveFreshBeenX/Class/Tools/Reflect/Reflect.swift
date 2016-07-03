@@ -26,7 +26,7 @@ class Reflect: NSObject, NSCoding{
             
             let hasValue = ignorePropertiesForCoding != nil
 
-            print("aDecoder:\(name),\(aDecoder.decodeObjectForKey(name))")
+//            print("aDecoder:\(name),\(aDecoder.decodeObjectForKey(name))")
             
             
             if hasValue {

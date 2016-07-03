@@ -13,7 +13,6 @@ private extension Selector {
     
     static let iconClick = #selector(XNHomeHotView.iconClick(_:))
 
-    
 }
 
 class XNHomeHotView: UIView {
@@ -49,14 +48,18 @@ class XNHomeHotView: UIView {
                 for i in 0..<headData!.icons!.count {
                     iconX = CGFloat(i % 4) * iconW + HotViewMargin
                     iconY = iconH * CGFloat(i / 4)
-                    let icon = XNCustomButton(title: headData!.icons![i].name!, color: UIColor.blackColor(), fontSize: 13, imageName: "icon_icons_holder")
-                    icon.frame = CGRectMake(iconX, iconY, iconW, iconH)
+                    let activitie: Activities = headData!.icons![i]
+
+                    let icon = XNCustomButton(title: headData!.icons![i].name!, color: UIColor.blackColor(), fontSize: 13, imageWithURL: NSURL(string: activitie.img!)!, placeholderImageName: "icon_icons_holder")
+                    icon.frame = CGRectMake(iconX, iconY, iconW, iconH-20)
+                    let sizeWh = icon.currentImage?.size
+                    
+                    icon.sd_setImageWithURL(NSURL(string: activitie.img!)!, forState: UIControlState.Normal)
+                    icon.imageView?.frame = CGRectMake(0, 0, (sizeWh?.width)!, (sizeWh?.height)!)
                     icon.tag = i
                     icon.addTarget(self, action: .iconClick, forControlEvents: .TouchUpInside)
                     addSubview(icon)
                 }
-                
-                
             }
         
         }
