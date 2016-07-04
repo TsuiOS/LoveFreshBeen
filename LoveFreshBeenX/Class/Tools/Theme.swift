@@ -24,6 +24,9 @@ public let HomeCollectionTextFont = UIFont.systemFontOfSize(14)
 /// 商品库存不足
 public let GoodsInventoryProblem = "GoodsInventoryProblem"
 
+/// 购物数量发生变化时
+public let LFBShopCarBuyNumberDidChangeNotification = "LFBShopCarBuyNumberDidChangeNotification"
+
 /// 延迟在主线程执行函数
 ///
 /// - parameter delta:    延迟时间

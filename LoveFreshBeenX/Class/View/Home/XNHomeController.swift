@@ -130,15 +130,13 @@ extension XNHomeController {
         collectionView.setContentOffset(CGPointMake(0, -(collectionView.contentInset.top)), animated: false)
     }
     
-    ///  库存提示
+    ///  库存提示/Users/xuning/Desktop/iOS 开发/LoveFreshBeenX/LoveFreshBeenX/Class/View
     func goodsInventoryProblem(noti: NSNotification) {
         
         if let goodsName = noti.object as? String {
             
             SVProgressHUD.showImage(UIImage(named: "v2_orderSuccess"), status: goodsName + "  库存不足了\n先买这么多, 过段时间再来看看吧~")
-            
         }
-        
     }
     
 
