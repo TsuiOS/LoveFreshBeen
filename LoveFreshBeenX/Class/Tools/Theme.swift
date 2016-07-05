@@ -23,9 +23,10 @@ public let HomeCollectionTextFont = UIFont.systemFontOfSize(14)
 
 /// 商品库存不足
 public let GoodsInventoryProblem = "GoodsInventoryProblem"
-
 /// 购物数量发生变化时
 public let LFBShopCarBuyNumberDidChangeNotification = "LFBShopCarBuyNumberDidChangeNotification"
+/// 购物车管理工具通知
+public let LFBShopCarDidRemoveProductNSNotification = "LFBShopCarDidRemoveProductNSNotification"
 
 /// 延迟在主线程执行函数
 ///

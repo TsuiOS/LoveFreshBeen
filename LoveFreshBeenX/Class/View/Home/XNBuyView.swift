@@ -164,6 +164,8 @@ class XNBuyView: UIView {
         buyCountLabel.text = "\(buyNumber)"
         buyCountLabel.hidden = false
         
+        XNUserShopCarTool.sharedUserShopCar.addSupermarkProductToShopCar(goods!)
+        NSNotificationCenter.defaultCenter().postNotificationName(LFBShopCarBuyNumberDidChangeNotification, object: nil)
     }
     
     func reduceGoodsButtonClick() {
@@ -179,7 +181,7 @@ class XNBuyView: UIView {
         } else {
             buyCountLabel.text = "\(buyNumber)"
         }
-        
+         NSNotificationCenter.defaultCenter().postNotificationName(LFBShopCarBuyNumberDidChangeNotification, object: nil)
     }
     
 }

@@ -8,6 +8,12 @@
 
 import UIKit
 
+private extension Selector {
+    
+    static let shopCarBuyNumberChanged = #selector(XNMainTabBarController.shopCarBuyNumberChanged)
+    
+}
+
 class XNMainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -15,6 +21,7 @@ class XNMainTabBarController: UITabBarController {
         view.backgroundColor = LFBGlobalBackgroundColor
 
         addSubControllers()
+        addNotification()
 
     
     }
@@ -23,6 +30,10 @@ class XNMainTabBarController: UITabBarController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 
 }
 
@@ -30,7 +41,6 @@ class XNMainTabBarController: UITabBarController {
 extension XNMainTabBarController {
     // 初始化tabbar
     private func addSubControllers() {
-        
         
         setupChildViewController(XNHomeController(), title: "首页", imageName: "v2_home", selectedImageName: "v2_home_r")
         setupChildViewController(XNSupermarketViewController(), title: "闪电超市", imageName: "v2_order", selectedImageName: "v2_order_r")
@@ -54,7 +64,25 @@ extension XNMainTabBarController {
         
         addChildViewController(nav)
     }
-
+    
+    private func addNotification() {
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: .shopCarBuyNumberChanged, name: LFBShopCarBuyNumberDidChangeNotification, object: nil)
+    }
+    
+    func shopCarBuyNumberChanged() {
+        let viewController = self.childViewControllers[2]
+        let item = viewController.tabBarItem
+        let goodsNumber = XNUserShopCarTool.sharedUserShopCar.getShopCarProductsCount()
+        if goodsNumber == 0 {
+            item.badgeValue = nil
+            return
+        }
+        item.badgeValue = "\(goodsNumber)"
+        
+        
+    }
+    
 
 }
 

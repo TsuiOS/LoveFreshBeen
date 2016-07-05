@@ -20,6 +20,7 @@
 		796220AF1D10E1E8007FD40A /* XNHomeHotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796220AE1D10E1E8007FD40A /* XNHomeHotView.swift */; };
 		796220B11D10F083007FD40A /* XNHeadResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796220B01D10F083007FD40A /* XNHeadResources.swift */; };
 		79670B1B1D29ECC0009CB522 /* XNEmptyShopCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79670B1A1D29ECC0009CB522 /* XNEmptyShopCarView.swift */; };
+		79670B1D1D2A495F009CB522 /* XNUserShopCarTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79670B1C1D2A495F009CB522 /* XNUserShopCarTool.swift */; };
 		796A91081D09480600FA96C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A91071D09480600FA96C6 /* AppDelegate.swift */; };
 		796A91111D09480600FA96C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796A91101D09480600FA96C6 /* Assets.xcassets */; };
 		796A91601D094CCB00FA96C6 /* AD in Resources */ = {isa = PBXBuildFile; fileRef = 796A913E1D094CCB00FA96C6 /* AD */; };
@@ -84,6 +85,7 @@
 		796220AE1D10E1E8007FD40A /* XNHomeHotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNHomeHotView.swift; sourceTree = "<group>"; };
 		796220B01D10F083007FD40A /* XNHeadResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNHeadResources.swift; sourceTree = "<group>"; };
 		79670B1A1D29ECC0009CB522 /* XNEmptyShopCarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNEmptyShopCarView.swift; sourceTree = "<group>"; };
+		79670B1C1D2A495F009CB522 /* XNUserShopCarTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XNUserShopCarTool.swift; sourceTree = "<group>"; };
 		796A91041D09480600FA96C6 /* LoveFreshBeenX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveFreshBeenX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		796A91071D09480600FA96C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		796A91101D09480600FA96C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				796A917C1D09651200FA96C6 /* UIBarButtonItem+Exttension.swift */,
 				796DA7881D0E5DA100907775 /* UIButton+Extension.swift */,
 				79DFD9791D0EA84900DFCE0E /* UIColor+Extension.swift */,
+				79670B1C1D2A495F009CB522 /* XNUserShopCarTool.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				794A12D71D191D8D00885999 /* Reflect+Convert.swift in Sources */,
 				796A917D1D09651200FA96C6 /* UIBarButtonItem+Exttension.swift in Sources */,
 				796A91831D09757F00FA96C6 /* UIView+Extension.swift in Sources */,
+				79670B1D1D2A495F009CB522 /* XNUserShopCarTool.swift in Sources */,
 				794A12D91D191D8D00885999 /* Reflect+Other.swift in Sources */,
 				79986D091D1A9AA300690C5F /* XNFreshHot.swift in Sources */,
 				79DFD9761D0E612C00DFCE0E /* XNCustomButton.swift in Sources */,
